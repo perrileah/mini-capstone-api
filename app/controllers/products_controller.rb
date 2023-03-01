@@ -4,13 +4,8 @@ class ProductsController < ApplicationController
     render template: "products/index"
   end
 
-  def show_product_one
-    @product = Product.first
-    render template: "products/show"
-  end
-
-  def show_product_two
-    @product = Product.second
-    render template: "products/show"
+  def show_one_product
+    product = Product.find_by(id: params[:id])
+    render json: { message: "hello" }
   end
 end
