@@ -8,4 +8,9 @@ class ProductsController < ApplicationController
     @product = Product.first
     render template: "products/show"
   end
+
+  def show_product_two
+    @product = Product.second
+    render template: "products/show"
+  end
 end
