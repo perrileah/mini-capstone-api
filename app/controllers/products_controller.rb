@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show_product_one
-    @products = Product.first
-    render json: @products
+    @product = Product.first
+    render template: "products/show"
   end
 end
