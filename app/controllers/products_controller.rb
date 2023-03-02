@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
-  def show_all
+  def index
     @products = Product.all
-    render template: "products/index"
+    render :index
   end
 
-  def show_one_product
+  def show
     product = Product.find_by(id: params[:id])
-    render json: { message: "hello" }
+    render :show
   end
 end
