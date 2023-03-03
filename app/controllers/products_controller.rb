@@ -26,8 +26,15 @@ class ProductsController < ApplicationController
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
       image_url: params[:image_url] || @product.image_url,
-      description: params[:description] || @product.description
+      description: params[:description] || @product.description,
     )
     @product.save
     render :show
+  end
+
+  def destroy
+    @product = Product.find_by(id: params[:id])
+    @product.destroy
+    render json: { message: "Destroyed!" }
+  end
 end

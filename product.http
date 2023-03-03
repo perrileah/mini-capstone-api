@@ -10,3 +10,15 @@ Content-Type: application/json
 "image_url": "https://i.ytimg.com/vi/WC2ZupdKbm0/sddefault.jpg",
 "description": "A low calorie vegetable that consists mostly of water, but also provides antioxidants and fiber."}
 
+###
+
+PATCH http://localhost:3000/products/6.json
+Content-Type: application/json
+
+{
+  "name": "test update"
+  }
+
+###
+
+DELETE http://localhost:3000/products/8.json
