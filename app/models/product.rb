@@ -15,6 +15,10 @@ class Product < ApplicationRecord
   #   end
   # end
 
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+
   def tax
     tax = price.to_i * 0.09
     return tax
@@ -24,4 +28,12 @@ class Product < ApplicationRecord
     total = price.to_i + tax
     return total
   end
+
+  # def images
+  #   Image.where(product_id: id)
+  # end
+
+  belongs_to :supplier
+
+  has_many :images
 end

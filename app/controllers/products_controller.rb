@@ -13,16 +13,15 @@ class ProductsController < ApplicationController
     @product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:image_url],
       description: params[:description],
-      supplier_id: params[:supplier_id]
+      supplier_id: params[:supplier_id],
     )
-    if @product.valid? #happy path
+    # if @product.valid? #happy path
     @product.save
     render :show
-    else #sad path
-      render :json {errors: @product.errors.full_messages}
-    end
+    # else #sad path
+    #   render :json {errors: @product.errors.full_messages}
+    # end
   end
 
   def update
@@ -30,17 +29,16 @@ class ProductsController < ApplicationController
     @product.update(
       name: params[:name] || @product.name,
       price: params[:price] || @product.price,
-      image_url: params[:image_url] || @product.image_url,
       description: params[:description] || @product.description,
-      supplier_id: params[:supplier_id] || @product.supplier_id
+      supplier_id: params[:supplier_id] || @product.supplier_id,
     )
-    if @product.valid? #happy path
-      @product.save
-      render :show
-    else #sad path
-        render :json {errors: @product.errors.full_messages}
-    end
-    
+    # if @product.valid? #happy path
+    @product.save
+    render :show
+    # else #sad path
+    #     render :json {errors: @product.errors.full_messages}
+    # end
+
   end
 
   def destroy
