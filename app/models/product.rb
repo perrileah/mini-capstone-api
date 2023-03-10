@@ -1,4 +1,9 @@
 class Product < ApplicationRecord
+  belongs_to :supplier
+
+  has_many :images
+
+  has_many :orders
   # validates :name, presence: true
   # validates :name, uniqueness: true
   # validates :name, length: { maximum: 12 }
@@ -33,7 +38,4 @@ class Product < ApplicationRecord
   #   Image.where(product_id: id)
   # end
 
-  belongs_to :supplier
-
-  has_many :images
 end

@@ -7,3 +7,36 @@ Content-Type: application/json
   "password": "bark",
   "password_confirmation": "bark"
 }
+
+###
+
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Buster@test.com",
+  "password": "bark"
+}
+
+###
+
+POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg0Nzk1Njh9.kKdgbd3h-Mbr_KLUaMtxqER5JfDCM7WucS7iFR3XxY0
+Content-Type: application/json
+
+{
+  "email": "Buster@test.com",
+  "password": "bark"
+}
+
+###
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "product_id": "1",
+  "quantity": "2",
+  "subtotal": "3.00" ,
+  "tax": "0.27",
+  "total": "3.27"
+}
