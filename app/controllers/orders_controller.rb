@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    @orders = Order.new(
+    @order = Order.new(
       user_id: params[:user_id],
       product_id: params[:product_id],
       quantity: params[:quantity],
@@ -8,17 +8,17 @@ class OrdersController < ApplicationController
       tax: params[:tax],
       total: params[:total],
     )
-    order.save
+    @order.save
     render :show
   end
 
   def show
-    @orders = Order.find_by(id: params[:id])
+    @order = Order.find_by(id: params[:id])
     render :show
   end
 
   def index
-    @orders = Order.all
+    @order = Order.all
     render :index
   end
 end

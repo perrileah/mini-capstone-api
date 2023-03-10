@@ -29,14 +29,3 @@ Content-Type: application/json
   "password": "bark"
 }
 
-###
-POST http://localhost:3000/orders.json
-Content-Type: application/json
-
-{
-  "product_id": "1",
-  "quantity": "2",
-  "subtotal": "3.00" ,
-  "tax": "0.27",
-  "total": "3.27"
-}
