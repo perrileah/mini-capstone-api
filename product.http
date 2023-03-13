@@ -7,8 +7,9 @@ Content-Type: application/json
 
 {"name": "Celery",
 "price": 3,
-"image_url": "https://i.ytimg.com/vi/WC2ZupdKbm0/sddefault.jpg",
-"description": "A low calorie vegetable that consists mostly of water, but also provides antioxidants and fiber."}
+"description": "A low calorie vegetable that consists mostly of water, but also provides antioxidants and fiber.",
+"supplier_id": 1
+}
 
 ###
 

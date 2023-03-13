@@ -8,24 +8,11 @@ Content-Type: application/json
   "password_confirmation": "bark"
 }
 
-###
-
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "Buster@test.com",
-  "password": "bark"
-}
 
 ###
 
 POST http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg0Nzk1Njh9.kKdgbd3h-Mbr_KLUaMtxqER5JfDCM7WucS7iFR3XxY0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTE0OTN9.kcEA_EDW6BZiHlRhQhpLTu2-IaSOKdu6sFIyB_ggpiQ
 Content-Type: application/json
 
-{
-  "email": "Buster@test.com",
-  "password": "bark"
-}
 
