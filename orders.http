@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTkwNzR9.6-tzPyZBkTEZU5zX9iwjwEVkqTs4iSOYkbjBP6Nz83E
+
 POST http://localhost:3000/orders.json
 Content-Type: application/json
 
@@ -14,11 +16,11 @@ Content-Type: application/json
 ###
 
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTUxNjd9.FXdbq9fS2V5PT5AkpuVTZXKSWmZXfbuyNet6HhshLa8
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "quantity": 3,
+  "quantity": 1,
   "product_id": 2
 }
 
@@ -26,5 +28,5 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTUxNjd9.FXdbq9fS2V5PT5AkpuVTZXKSWmZXfbuyNet6HhshLa8
+Authorization: Bearer {{jwt}}
 Content_type: application/json

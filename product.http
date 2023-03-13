@@ -1,15 +1,19 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTkwNzR9.6-tzPyZBkTEZU5zX9iwjwEVkqTs4iSOYkbjBP6Nz83E
+
+@jwt_admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTkwNzR9.6-tzPyZBkTEZU5zX9iwjwEVkqTs4iSOYkbjBP6Nz83E
+
 GET http://localhost:3000/products.json
 
 ###
 
 POST http://localhost:3000/products.json
-Authorization: Bearer 
+Authorization: Bearer {{jwt_admin}}
 Content-Type: application/json
 
-{"name": "Celery",
-"price": 3,
-"description": "A low calorie vegetable that consists mostly of water, but also provides antioxidants and fiber.",
-"supplier_id": 1
+{"name": "Carrot",
+"price": 4,
+"description": "An herbaceous, generally biennial plant of the Apiaceae family that produces an edible taproot.",
+"supplier_id": 2
 }
 
 ###
