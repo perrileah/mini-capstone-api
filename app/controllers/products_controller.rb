@@ -4,7 +4,12 @@ class ProductsController < ApplicationController
   def index
     pp current_user
     @products = Product.all
-    render :index
+
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+      render :index
+    end
   end
 
   def show

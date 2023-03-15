@@ -2,7 +2,7 @@
 
 @jwt_admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTkwNzR9.6-tzPyZBkTEZU5zX9iwjwEVkqTs4iSOYkbjBP6Nz83E
 
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=Spring
 
 ###
 
