@@ -20,7 +20,7 @@ class SuppliersController < ApplicationController
     @supplier.save
     render :show
     else #sad path
-      render :json {errors: @supplier.errors.full_messages}
+      render json: {errors: @supplier.errors.full_messages}
     end
   end
 

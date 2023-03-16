@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
   belongs_to :user
-  belongs_to :product
+  has_many :carted_products
+  belongs_to :product # take out or leave in?
 end
