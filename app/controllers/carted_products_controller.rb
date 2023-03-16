@@ -1,20 +1,29 @@
 class CartedProductsController < ApplicationController
   def create
     @carted_product = CartedProduct.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: params[:status],
+      status: "carted",
     )
     if @carted_product.save
       render :show
-    else #sad path
+    else #sad pathmodf
       render json: { errors: @carted_product.errors.full_messages }
     end
   end
 
-  def show
-    @carted_product = CartedProduct.find_by(id: params[:id])
-    render :show
+  def index
+    if current_user
+      @carted_product = current_user.carted_products
+      render :index
+    else
+      render json: [], status: :unauthorized
+    end
   end
+
+  # def show
+  #   @carted_product = CartedProduct.find_by(id: params[:id])
+  #   render :show
+  # end
 end
