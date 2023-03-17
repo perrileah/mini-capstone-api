@@ -15,7 +15,7 @@ class CartedProductsController < ApplicationController
 
   def index
     if current_user
-      @carted_product = current_user.carted_products
+      @carted_products = current_user.carted_products
       render :index
     else
       render json: [], status: :unauthorized
