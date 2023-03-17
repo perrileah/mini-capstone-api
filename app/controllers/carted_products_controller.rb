@@ -14,12 +14,14 @@ class CartedProductsController < ApplicationController
   end
 
   def index
-    if current_user
-      @carted_products = current_user.carted_products.where(status: "carted")
-      render :index
-    else
-      render json: [], status: :unauthorized
-    end
+    @carted_products = current_user.carted_products.where(status: "carted")
+    render :index
+  end
+
+  def destroy
+    carted_product = current_user.carted_products.find_by(id: params[:id], status: "carted")
+    carted_product.update(status: "removed")
+    redner json: { status: "Carted product successfully removed!" }
   end
 end
 

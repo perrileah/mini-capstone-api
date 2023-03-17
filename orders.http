@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Nzg4MTkwNzR9.6-tzPyZBkTEZU5zX9iwjwEVkqTs4iSOYkbjBP6Nz83E
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzkxNTY0NTV9.4fOsO5W7DkaFYFm-5PSLAlAmlj47TzoxrP50hTeGwMU
 
 POST http://localhost:3000/orders.json
 Content-Type: application/json
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 {
   "quantity": 1,
-  "product_id": 2
+  "product_id": 1
 }
 
 
